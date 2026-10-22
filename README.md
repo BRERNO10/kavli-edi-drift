@@ -7,9 +7,9 @@ Kunnskapsbase og Copilot Cowork-plugin for drift og feilsøking av integrasjonen
 
 Repoet er grunnlaget for AI-POC-en november 2026 – januar 2027. POC-en måles bare på EDI.
 
-| Rolle | Navn |
+| M3 BS Consultant | Brage Erstad |
 | --- | --- |
-| Eier | [navn] |
+| Eier | Brage Erstd |
 | Stedfortreder | [navn] |
 
 ## Struktur
