@@ -44,7 +44,7 @@ Filer som starter med `_` er maler. Kopier dem og gi filen et nytt navn.
 ## Regler
 
 1. **Bare PRD foreløpig.** Filnavn i `kilde/`: `PRD_ÅÅÅÅ-MM-DD_<type>_<navn>.<filtype>`, for eksempel `PRD_2026-10-21_dataflow_DESADV-ut.xml`.
-2. **Ingen hemmeligheter.** Aldri .ionapi-filer, passord, nøkler, sertifikater eller tilkoblingsstrenger med passord. Gitleaks sjekker hver push. Slår den ut, må passordet eller nøkkelen byttes – å slette det fra historikken er ikke nok.
+2. **Ingen passord.** Aldri .ionapi-filer, passord, nøkler, sertifikater eller tilkoblingsstrenger med passord. Gitleaks sjekker hver push. Slår den ut, må passordet eller nøkkelen byttes – å slette det fra historikken er ikke nok.
 3. **Ingen rå meldinger eller logger med kunde-, partner- eller persondata.** Bare anonymiserte eksempler, i `kilde/eksempler/`.
 4. **Råeksporter redigeres ikke.** Forklaringer og vurderinger skrives i `docs/`.
 5. **Flytkort heter `edi_…` eller `intern_…`.** Bygget stopper ellers. Bruk «intern», ikke «prod», så det ikke forveksles med PRD-miljøet.
