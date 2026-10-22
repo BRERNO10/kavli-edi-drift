@@ -1,0 +1,12 @@
+* text=auto
+*.md text
+*.xml text
+*.csv text
+*.json text
+*.yml text
+*.zip binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.xlsx binary
+*.docx binary

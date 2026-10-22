@@ -1,0 +1,7 @@
+# Hvem som må godkjenne endringer. Bytt ut med Kavli-organisasjonens team eller brukernavn,
+# og fjern # foran linjene. Står flere på én linje, holder det at én av dem godkjenner.
+#
+# *                @<organisasjon>/integrasjonsdrift
+# /plugin/         @<organisasjon>/integrasjonsdrift
+# /docs/systemer/  @<organisasjon>/integrasjonsdrift @<organisasjon>/<systemeiere>
+# /.github/        @<organisasjon>/it-admin

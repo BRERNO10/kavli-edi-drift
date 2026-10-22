@@ -1,0 +1,10 @@
+{
+  "name": "kavli-integrasjonsdrift",
+  "version": "0.1.0",
+  "description": "Feilsøking og oversikt over Kavlis integrasjoner i Infor M3 CloudSuite: EDI og interne flyter i produksjonen.",
+  "author": {
+    "name": "Kavli IT"
+  },
+  "homepage": "https://github.com/ORGANISASJON/kavli-integrasjonsdrift",
+  "keywords": ["edi", "infor-m3", "ion", "enterprise-collaborator", "integrasjoner", "produksjon"]
+}

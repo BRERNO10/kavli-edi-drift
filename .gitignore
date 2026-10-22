@@ -1,0 +1,37 @@
+# Rå meldinger og logger med kunde-, partner- eller persondata (bare anonymiserte eksempler er lov)
+*.rcv
+*.rcv.txt
+*.edi
+*.edi.txt
+*.log
+payloads/
+!*.anon.*
+
+# Hemmeligheter – skal aldri i repoet, heller ikke med .anon. i navnet
+*.ionapi
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+.env
+.env.*
+secrets/
+
+# Databasekopier og backup fra systemene
+*.bak
+*.mdf
+*.ldf
+
+# Bygg
+dist/
+plugin/skills/*/references/gen-*
+__pycache__/
+*.pyc
+
+# Office- og systemfiler
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,45 @@
+# Gitleaks-oppsett for kavli-integrasjonsdrift.
+# Bruker standardreglene, pluss egne regler for filer fra Infor og fra systemene i produksjonen.
+# Maskerte verdier (***) godtas, så eksporter der passord er erstattet med *** går gjennom.
+
+title = "kavli-integrasjonsdrift"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "infor-ionapi-hemmelighet"
+description = "Client secret eller service account-nøkkel fra en .ionapi-fil"
+regex = '''"(?:cs|saak|sask)"\s*:\s*"([^"]{8,})"'''
+secretGroup = 1
+keywords = ['"cs"', '"saak"', '"sask"']
+
+[[rules]]
+id = "xml-passord-element"
+description = "Passord eller hemmelighet i et XML-element"
+regex = '''(?i)<(?:[a-z0-9_]+:)?(?:password|passwd|pwd|clientsecret|client_secret|secretkey|secret|apikey|api_key)\b[^>]*>([^<\s][^<]{3,})</'''
+secretGroup = 1
+keywords = ["password", "passwd", "pwd", "secret", "apikey", "api_key"]
+
+[[rules.allowlists]]
+regexes = ['''^\*+$''']
+
+[[rules]]
+id = "xml-passord-attributt"
+description = "Passord eller hemmelighet i et XML-attributt"
+regex = '''(?i)\b(?:password|passwd|pwd|clientsecret|client_secret|secretkey|apikey|api_key)\s*=\s*"([^"]{4,})"'''
+secretGroup = 1
+keywords = ["password", "passwd", "pwd", "secret", "apikey", "api_key"]
+
+[[rules.allowlists]]
+regexes = ['''^\*+$''']
+
+[[rules]]
+id = "tilkoblingsstreng-passord"
+description = "Passord i en tilkoblingsstreng eller konfigurasjonsfil, for eksempel fra Quickdesign eller MAC"
+regex = '''(?i)(?:password|passwd|pwd)\s*=\s*([^\s;"'<>&]{4,})'''
+secretGroup = 1
+keywords = ["password", "passwd", "pwd"]
+
+[[rules.allowlists]]
+regexes = ['''^\*+$''', '''(?i)^(?:true|false|null|none)$''']
